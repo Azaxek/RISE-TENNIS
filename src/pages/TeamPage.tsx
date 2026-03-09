@@ -10,7 +10,7 @@ export const TeamPage = () => {
     { name: "Moksha Rawlani", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/moksha/400/400" },
     { name: "Rishabh Shah", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/rishabh/400/400" },
     { name: "Rahul", role: "Head Manager", team: "Management", bio: "Head Manager of operations.", img: "https://picsum.photos/seed/rahul/400/400" },
-    { name: "Arjan", role: "Chief Technology Officer", team: "Website", bio: "Handling website architecture and all things technology for R.I.S.E. Tennis.", img: "https://picsum.photos/seed/arjan/400/400" },
+    { name: "Arjan", role: "Technology Director", team: "Website", bio: "Handling website architecture and all things technology for R.I.S.E. Tennis.", img: "https://picsum.photos/seed/arjan/400/400" },
     { name: "Ishaan Joshi", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in New Jersey.", img: "https://picsum.photos/seed/ishaan/400/400" },
     { name: "Riddhi C.", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in Fremont, CA.", img: "https://picsum.photos/seed/riddhi/400/400" },
     { name: "Avanthika", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in Philadelphia, PA.", img: "https://picsum.photos/seed/avanthika/400/400" },
@@ -29,7 +29,7 @@ export const TeamPage = () => {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
