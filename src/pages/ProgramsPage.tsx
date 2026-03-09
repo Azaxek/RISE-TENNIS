@@ -6,24 +6,26 @@ import { Link } from 'react-router-dom';
 export const ProgramsPage = () => {
   const programs = [
     {
-      title: "Fremont Summer Clinics",
+      title: "Fremont Clinics",
       location: "Central Park, Fremont",
-      time: "June - August",
-      desc: "Our flagship summer program. We offer weekly sessions for all skill levels. All equipment is provided, including rackets and balls.",
-      details: ["Ages 6-14", "Beginner to Intermediate", "Free Equipment Rental", "Student-to-Coach ratio 4:1"],
+      time: "Sign Ups Open",
+      desc: "Our flagship program offering weekly sessions for all skill levels. All equipment is provided, including rackets and balls. Sign up through our registration form!",
+      details: ["Ages 6-14", "Beginner to Intermediate", "Free Equipment Provided", "Student-to-Coach ratio 4:1"],
       icon: <Calendar className="w-8 h-8" />,
       color: "bg-tennis-neon",
-      textColor: "text-midnight"
+      textColor: "text-midnight",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfIOMmzgoUpsxI53eBZybu7-EIlmkMmNQZqiBaJR8qmOXiN8A/viewform"
     },
     {
       title: "San Jose Launch Camp",
-      location: "Backesto Park, San Jose",
-      time: "Year-Round Weekends",
-      desc: "A high-energy weekend program focused on introducing the fundamentals of tennis to new players in a fun, low-pressure environment.",
-      details: ["Ages 5-12", "Absolute Beginners", "Focus on Coordination", "Fun Games & Prizes"],
+      location: "Cataldi Park, San Jose",
+      time: "Coming Soon",
+      desc: "Join our free introductory tennis camp! Perfect for beginners to learn fundamental skills in a fun, welcoming setting. All equipment provided.",
+      details: ["Ages 5-12", "Absolute Beginners", "Focus on Fundamentals", "Fun Games & Prizes"],
       icon: <Trophy className="w-8 h-8" />,
       color: "bg-midnight",
-      textColor: "text-white"
+      textColor: "text-white",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfIOMmzgoUpsxI53eBZybu7-EIlmkMmNQZqiBaJR8qmOXiN8A/viewform"
     },
     {
       title: "Community Outreach",
@@ -33,14 +35,15 @@ export const ProgramsPage = () => {
       details: ["All Ages Welcome", "Family Friendly", "Community Building", "Guest Speakers"],
       icon: <Users className="w-8 h-8" />,
       color: "bg-energetic-orange",
-      textColor: "text-white"
+      textColor: "text-white",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfIOMmzgoUpsxI53eBZybu7-EIlmkMmNQZqiBaJR8qmOXiN8A/viewform"
     }
   ];
 
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
@@ -89,9 +92,9 @@ export const ProgramsPage = () => {
                     ))}
                   </div>
                 </div>
-                <button className="bg-midnight text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 self-start hover:bg-tennis-neon hover:text-midnight transition-all">
+                <a href={p.link} target="_blank" rel="noopener noreferrer" className="bg-midnight text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 self-start hover:bg-tennis-neon hover:text-midnight transition-all">
                   Register Now <ArrowRight className="w-5 h-5" />
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
