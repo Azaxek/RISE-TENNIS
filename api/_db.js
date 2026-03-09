@@ -34,7 +34,8 @@ export async function ensureTables() {
 
         initialized = true;
     } catch (e) {
-        // Tables may already exist, that's fine
+        // Log the error for Vercel function logs but don't block
+        console.error('DB init error:', e?.message || e);
         initialized = true;
     }
 }

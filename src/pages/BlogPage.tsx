@@ -20,8 +20,8 @@ export const BlogPage = () => {
   useEffect(() => {
     fetch('/api/posts')
       .then((res) => res.json())
-      .then((data) => { setPosts(data); setLoading(false); })
-      .catch(() => setLoading(false));
+      .then((data) => { setPosts(Array.isArray(data) ? data : []); setLoading(false); })
+      .catch(() => { setPosts([]); setLoading(false); });
   }, []);
 
   if (selectedPost) {

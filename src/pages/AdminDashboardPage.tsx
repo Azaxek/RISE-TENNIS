@@ -36,9 +36,9 @@ export const AdminDashboardPage = () => {
         try {
             const res = await fetch('/api/posts/all');
             const data = await res.json();
-            setPosts(data);
+            setPosts(Array.isArray(data) ? data : []);
         } catch {
-            console.error('Failed to fetch posts');
+            setPosts([]);
         }
     };
 
