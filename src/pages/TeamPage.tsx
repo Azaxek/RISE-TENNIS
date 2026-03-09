@@ -4,12 +4,26 @@ import { Heart, Users, Trophy, Star } from 'lucide-react';
 
 export const TeamPage = () => {
   const team = [
-    { name: "Aarav Sharma", role: "Founder & Executive Director", bio: "A competitive tennis player with a passion for community service.", img: "https://picsum.photos/seed/aarav/400/400" },
-    { name: "Maya Patel", role: "Director of Operations", bio: "Ensuring our clinics run smoothly across all Bay Area locations.", img: "https://picsum.photos/seed/maya/400/400" },
-    { name: "Kevin Zhang", role: "Head of Coaching", bio: "Developing our curriculum to make tennis fun for absolute beginners.", img: "https://picsum.photos/seed/kevin/400/400" },
-    { name: "Sofia Rodriguez", role: "Community Outreach", bio: "Connecting R.I.S.E. with local schools and community centers.", img: "https://picsum.photos/seed/sofia/400/400" },
-    { name: "Jason Lee", role: "Podcast Host", bio: "Leading conversations on the Open Court podcast.", img: "https://picsum.photos/seed/jason/400/400" },
-    { name: "Emily Chen", role: "Events Coordinator", bio: "Planning our fundraisers and community play days.", img: "https://picsum.photos/seed/emily/400/400" }
+    { name: "Harshil Shah", role: "President", team: "Executive", bio: "Executive leader of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/harshil/400/400" },
+    { name: "Ananya Rawlani", role: "President", team: "Executive", bio: "Executive leader of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/ananya/400/400" },
+    { name: "Harshal Shah", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/harshal/400/400" },
+    { name: "Moksha Rawlani", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/moksha/400/400" },
+    { name: "Rishabh Shah", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/rishabh/400/400" },
+    { name: "Rahul", role: "Head Manager", team: "Management", bio: "Head Manager of operations.", img: "https://picsum.photos/seed/rahul/400/400" },
+    { name: "Arjan", role: "Chief Technology Officer", team: "Website", bio: "Handling website architecture and all things technology for R.I.S.E. Tennis.", img: "https://picsum.photos/seed/arjan/400/400" },
+    { name: "Ishaan Joshi", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in New Jersey.", img: "https://picsum.photos/seed/ishaan/400/400" },
+    { name: "Riddhi C.", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in Fremont, CA.", img: "https://picsum.photos/seed/riddhi/400/400" },
+    { name: "Avanthika", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in Philadelphia, PA.", img: "https://picsum.photos/seed/avanthika/400/400" },
+    { name: "Saanvi Bachamada", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in Fremont, CA.", img: "https://picsum.photos/seed/saanvi/400/400" },
+    { name: "Elizabeth George", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in Fremont, CA.", img: "https://picsum.photos/seed/elizabeth/400/400" },
+    { name: "Avinash Kasturi", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in Texas.", img: "https://picsum.photos/seed/avinash/400/400" },
+    { name: "Anushka", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in CA.", img: "https://picsum.photos/seed/anushka/400/400" },
+    { name: "Mishka", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in CA.", img: "https://picsum.photos/seed/mishka/400/400" },
+    { name: "Sharon Lui", role: "Coach", team: "Coaching", bio: "Tennis coach in Fremont, CA.", img: "https://picsum.photos/seed/sharon/400/400" },
+    { name: "Aniketh Nadipati", role: "Coach", team: "Coaching", bio: "Tennis coach in San Jose, CA.", img: "https://picsum.photos/seed/aniketh/400/400" },
+    { name: "Arjun Sachadeva", role: "Coach", team: "Coaching", bio: "Tennis coach in Fremont, CA.", img: "https://picsum.photos/seed/arjun/400/400" },
+    { name: "Disha", role: "Coach", team: "Coaching", bio: "Tennis coach in Fremont, CA.", img: "https://picsum.photos/seed/disha/400/400" },
+    { name: "Lucas", role: "Coach", team: "Coaching", bio: "Tennis coach in San Jose, CA.", img: "https://picsum.photos/seed/lucas/400/400" }
   ];
 
   return (

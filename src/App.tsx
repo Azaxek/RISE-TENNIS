@@ -9,15 +9,17 @@ import { PodcastPage } from './pages/PodcastPage';
 import { TeamPage } from './pages/TeamPage';
 import { DonatePage } from './pages/DonatePage';
 import { BlogPage } from './pages/BlogPage';
+import { AdminLoginPage } from './pages/AdminLoginPage';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   return null;
 };
 
@@ -36,6 +38,8 @@ export default function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/donate" element={<DonatePage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/admin" element={<AdminLoginPage />} />
+            <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
           </Routes>
         </main>
         <Footer />

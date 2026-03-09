@@ -7,7 +7,7 @@ const Tennis3DAnimation = () => {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-midnight flex items-center justify-center" style={{ perspective: "1200px" }}>
       {/* 3D Court Floor */}
-      <motion.div 
+      <motion.div
         initial={{ rotateX: 60, y: 100 }}
         className="relative w-[120%] h-[150%] border-[4px] border-white/20 bg-emerald-900/20 shadow-[0_0_100px_rgba(16,185,129,0.1)]"
         style={{ transformStyle: "preserve-3d" }}
@@ -19,9 +19,9 @@ const Tennis3DAnimation = () => {
         </div>
         <div className="absolute inset-y-0 left-1/2 w-1 bg-white/40 -translate-x-1/2"></div>
         <div className="absolute inset-x-0 top-1/2 h-1 bg-white/20 -translate-y-1/2"></div>
-        
+
         {/* Net (Vertical in 3D) */}
-        <div 
+        <div
           className="absolute top-1/2 left-0 right-0 h-24 bg-white/10 border-t-2 border-white/40 -translate-y-full flex items-center justify-center overflow-hidden"
           style={{ transform: "rotateX(-90deg)", transformOrigin: "bottom" }}
         >
@@ -97,14 +97,14 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-midnight">
-      <motion.div 
+      <motion.div
         style={{ opacity, scale }}
         className="absolute inset-0 z-0"
       >
         <Tennis3DAnimation />
       </motion.div>
 
-      <motion.div 
+      <motion.div
         style={{ opacity, scale }}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -118,11 +118,11 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         style={{ opacity }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20"
       >
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
@@ -130,21 +130,21 @@ const Hero = () => {
         >
           Scroll to Explore
         </motion.span>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
           className="w-8 h-14 border-2 border-white/20 rounded-full flex justify-center p-2"
         >
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               y: [0, 16, 0],
               opacity: [1, 0.5, 1]
             }}
-            transition={{ 
-              repeat: Infinity, 
-              duration: 2, 
-              ease: "easeInOut" 
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut"
             }}
             className="w-1.5 h-3 bg-tennis-neon rounded-full shadow-[0_0_10px_#DFFF00]"
           />
@@ -176,7 +176,7 @@ const MissionHeadline = () => {
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-white/70 font-medium mb-12 leading-relaxed">
           Breaking financial and social barriers to make tennis accessible for every child in the Bay Area. Join our mission to transform lives through sport.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link to="/programs" className="w-full sm:w-auto bg-tennis-neon text-midnight px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform duration-300 shadow-xl shadow-tennis-neon/20 text-center">
             Find a Program
@@ -195,16 +195,16 @@ const About = () => {
     <section id="about" className="py-24 md:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative"
           >
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl rotate-2">
-              <img 
-                src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?q=80&w=800&h=1000&auto=format&fit=crop" 
-                alt="Tennis community" 
+              <img
+                src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?q=80&w=800&h=1000&auto=format&fit=crop"
+                alt="Tennis community"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -347,17 +347,22 @@ const Podcast = () => {
               Conversations with players, coaches, and community leaders about sports accessibility and the transformative power of tennis.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a 
-                href="https://www.youtube.com/watch?v=AZff2TpCNkk" 
-                target="_blank" 
+              <a
+                href="https://www.youtube.com/watch?v=AZff2TpCNkk"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-midnight px-8 py-4 rounded-2xl font-black flex items-center gap-3 hover:bg-tennis-neon transition-colors"
               >
                 <Youtube className="w-5 h-5 text-red-600" /> Watch on YouTube
               </a>
-              <button className="bg-white/10 text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 hover:bg-white/20 transition-colors">
+              <a
+                href="https://open.spotify.com/show/75nco6taCiXwgdpVnusTkf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 hover:bg-white/20 transition-colors"
+              >
                 <Play className="fill-current w-4 h-4" /> Listen on Spotify
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -370,9 +375,9 @@ const Podcast = () => {
             <div className="glass-dark p-8 md:p-12 rounded-[3rem] shadow-2xl">
               <div className="flex items-center gap-6 mb-10">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=200&h=200&auto=format&fit=crop" 
-                    alt="Podcast Cover" 
+                  <img
+                    src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=200&h=200&auto=format&fit=crop"
+                    alt="Podcast Cover"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
@@ -385,7 +390,7 @@ const Podcast = () => {
 
               <div className="flex items-end gap-1 h-16 mb-10">
                 {[...Array(30)].map((_, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     animate={{ height: [10, Math.random() * 60 + 10, 10] }}
                     transition={{ repeat: Infinity, duration: 1.5, delay: i * 0.05 }}
@@ -396,9 +401,9 @@ const Podcast = () => {
 
               <div className="flex items-center justify-between">
                 <button className="text-white/40 hover:text-white transition-colors"><SkipBack /></button>
-                <a 
-                  href="https://www.youtube.com/watch?v=AZff2TpCNkk" 
-                  target="_blank" 
+                <a
+                  href="https://www.youtube.com/watch?v=AZff2TpCNkk"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-16 h-16 bg-tennis-neon text-midnight rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-tennis-neon/20"
                 >
@@ -430,26 +435,19 @@ const Gallery = () => {
             Our Courts, Our Community
           </h2>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.05 }}
-              viewport={{ once: true }}
-              className="aspect-square rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group"
-            >
-              <img 
-                src={`https://picsum.photos/seed/tennis-${i}/800/800`} 
-                alt={`Community Tennis ${i}`} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
-          ))}
-        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="rounded-[3rem] overflow-hidden shadow-2xl"
+        >
+          <img
+            src="/collage.png"
+            alt="RISE Tennis Community Collage"
+            className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-700"
+          />
+        </motion.div>
       </div>
     </section>
   );
@@ -458,7 +456,7 @@ const Gallery = () => {
 const CTA = () => {
   return (
     <section className="py-24 px-6">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
