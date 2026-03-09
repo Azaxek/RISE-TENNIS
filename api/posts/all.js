@@ -1,13 +1,16 @@
-import { sql } from '@vercel/postgres';
+import pg from 'pg';
+const { Pool } = pg;
 
-let initialized = false;
+let pool;
 
-async function ensureTables() {
-    if (initialized) return;
-    try {
-        await sql`CREATE TABLE IF NOT EXISTS posts (id SERIAL PRIMARY KEY, title TEXT NOT NULL, excerpt TEXT DEFAULT '', content TEXT NOT NULL, image_url TEXT DEFAULT '', author TEXT DEFAULT 'RISE Tennis', date DATE DEFAULT CURRENT_DATE, published INTEGER DEFAULT 1)`;
-        initialized = true;
-    } catch (e) { initialized = true; }
+function getPool() {
+    if (!pool) {
+        pool = new Pool({
+            connectionString: process.env.POSTGRES_URL || process.env.DATABASE_URL,
+            ssl: { rejectUnauthorized: false }
+        });
+    }
+    return pool;
 }
 
 export default async function handler(req, res) {
@@ -16,8 +19,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        await ensureTables();
-        const { rows } = await sql`SELECT * FROM posts ORDER BY id DESC`;
+        const { rows } = await getPool().query('SELECT * FROM posts ORDER BY id DESC');
         return res.json(rows);
     } catch (error) {
         return res.status(500).json({ message: 'Database error: ' + error.message });
