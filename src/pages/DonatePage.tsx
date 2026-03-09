@@ -6,7 +6,7 @@ export const DonatePage = () => {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
@@ -22,23 +22,25 @@ export const DonatePage = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           {[
-            { 
-              title: "One-Time Donation", 
-              desc: "Every dollar goes directly toward equipment and court fees.", 
+            {
+              title: "One-Time Donation",
+              desc: "Every dollar goes directly toward equipment and court fees.",
               icon: <DollarSign className="w-8 h-8" />,
               options: ["$25", "$50", "$100", "Custom"]
             },
-            { 
-              title: "Equipment Donation", 
-              desc: "Donate new or gently used rackets, balls, and tennis gear.", 
+            {
+              title: "Equipment Donation",
+              desc: "Donate new or gently used rackets, balls, and tennis gear.",
               icon: <Gift className="w-8 h-8" />,
-              options: ["Drop-off", "Ship to Us", "Local Pickup"]
+              options: ["Drop-off", "Ship to Us", "Local Pickup"],
+              mailto: "mailto:rise.tennis28@gmail.com?subject=Equipment%20Donation%20Inquiry"
             },
-            { 
-              title: "Corporate Support", 
-              desc: "Partner with R.I.S.E. to support youth athletics in your community.", 
+            {
+              title: "Corporate Support",
+              desc: "Partner with R.I.S.E. to support youth athletics in your community.",
               icon: <Users className="w-8 h-8" />,
-              options: ["Sponsorship", "Matching Gifts", "Volunteer Days"]
+              options: ["Sponsorship", "Matching Gifts", "Volunteer Days"],
+              mailto: "mailto:rise.tennis28@gmail.com?subject=Corporate%20Support%20Inquiry"
             }
           ].map((card, i) => (
             <motion.div
@@ -63,9 +65,15 @@ export const DonatePage = () => {
                   ))}
                 </div>
               </div>
-              <button className="w-full bg-midnight text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3 hover:bg-tennis-neon hover:text-midnight transition-all">
-                Select Option <ArrowRight className="w-5 h-5" />
-              </button>
+              {card.mailto ? (
+                <a href={card.mailto} className="w-full bg-midnight text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3 hover:bg-tennis-neon hover:text-midnight transition-all">
+                  Contact Us <ArrowRight className="w-5 h-5" />
+                </a>
+              ) : (
+                <button className="w-full bg-midnight text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3 hover:bg-tennis-neon hover:text-midnight transition-all">
+                  Select Option <ArrowRight className="w-5 h-5" />
+                </button>
+              )}
             </motion.div>
           ))}
         </div>
@@ -73,7 +81,7 @@ export const DonatePage = () => {
         {/* Impact Section */}
         <div className="bg-midnight rounded-[4rem] p-12 md:p-24 text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-96 h-96 bg-tennis-neon/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-          
+
           <div className="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tighter">Your Impact</h2>
@@ -93,9 +101,9 @@ export const DonatePage = () => {
               </div>
             </div>
             <div className="aspect-video rounded-[2rem] overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1599586120429-48281b6f0ece?q=80&w=800&h=600&auto=format&fit=crop" 
-                alt="Happy kids with tennis rackets" 
+              <img
+                src="https://images.unsplash.com/photo-1599586120429-48281b6f0ece?q=80&w=800&h=600&auto=format&fit=crop"
+                alt="Happy kids with tennis rackets"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
