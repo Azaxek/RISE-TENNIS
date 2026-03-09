@@ -1,6 +1,9 @@
 import { sql } from '@vercel/postgres';
+import { ensureTables } from '../_db.js';
 
 export default async function handler(req, res) {
+    await ensureTables();
+
     if (req.method === 'GET') {
         try {
             const { rows } = await sql`

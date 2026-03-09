@@ -1,6 +1,8 @@
 import { sql } from '@vercel/postgres';
+import { ensureTables } from '../_db.js';
 
 export default async function handler(req, res) {
+    await ensureTables();
     const { id } = req.query;
 
     if (req.method === 'DELETE') {

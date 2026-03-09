@@ -1,9 +1,12 @@
 import { sql } from '@vercel/postgres';
+import { ensureTables } from '../_db.js';
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
     }
+
+    await ensureTables();
 
     const { username, password } = req.body;
 
