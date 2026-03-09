@@ -24,8 +24,7 @@ export const ProgramsPage = () => {
       details: ["Ages 5-12", "Absolute Beginners", "Focus on Fundamentals", "Fun Games & Prizes"],
       icon: <Trophy className="w-8 h-8" />,
       color: "bg-midnight",
-      textColor: "text-white",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfIOMmzgoUpsxI53eBZybu7-EIlmkMmNQZqiBaJR8qmOXiN8A/viewform"
+      textColor: "text-white"
     },
     {
       title: "Community Outreach",
@@ -35,8 +34,7 @@ export const ProgramsPage = () => {
       details: ["All Ages Welcome", "Family Friendly", "Community Building", "Guest Speakers"],
       icon: <Users className="w-8 h-8" />,
       color: "bg-energetic-orange",
-      textColor: "text-white",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfIOMmzgoUpsxI53eBZybu7-EIlmkMmNQZqiBaJR8qmOXiN8A/viewform"
+      textColor: "text-white"
     }
   ];
 
@@ -92,9 +90,11 @@ export const ProgramsPage = () => {
                     ))}
                   </div>
                 </div>
-                <a href={p.link} target="_blank" rel="noopener noreferrer" className="bg-midnight text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 self-start hover:bg-tennis-neon hover:text-midnight transition-all">
-                  Register Now <ArrowRight className="w-5 h-5" />
-                </a>
+                {p.link && (
+                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="bg-midnight text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 self-start hover:bg-tennis-neon hover:text-midnight transition-all">
+                    Register Now <ArrowRight className="w-5 h-5" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
