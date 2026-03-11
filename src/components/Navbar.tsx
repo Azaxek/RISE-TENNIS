@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Trophy, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -30,9 +30,7 @@ export const Navbar = () => {
         <div className={`glass rounded-2xl px-6 py-3 flex items-center justify-between shadow-lg transition-all duration-300 ${isScrolled ? 'mx-0' : 'mx-4'}`}>
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group cursor-pointer">
-            <div className="w-10 h-10 bg-midnight rounded-lg flex items-center justify-center group-hover:bg-tennis-neon transition-colors duration-300">
-              <Trophy className="text-tennis-neon group-hover:text-midnight w-6 h-6 transition-colors duration-300" />
-            </div>
+            <img src="/rise-logo.png" alt="R.I.S.E. Tennis Logo" className="w-10 h-10 rounded-lg object-cover" />
             <span className="font-display font-black text-xl tracking-tighter text-midnight">R.I.S.E. TENNIS</span>
           </Link>
 

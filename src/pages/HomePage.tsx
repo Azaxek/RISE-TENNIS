@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Trophy, Users, Heart, Calendar, ArrowRight, Music2, Youtube, Play, SkipBack, SkipForward, Volume2 } from 'lucide-react';
+import { Users, Heart, ArrowRight, Music2, Youtube, Play, SkipBack, SkipForward, Volume2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Tennis3DAnimation = () => {
@@ -111,10 +111,8 @@ const Hero = () => {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="relative z-10"
       >
-        <div className="w-40 h-40 md:w-64 md:h-64 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-md">
-          <div className="w-32 h-32 md:w-52 md:h-52 bg-tennis-neon rounded-full flex items-center justify-center shadow-[0_0_80px_rgba(223,255,0,0.4)]">
-            <Trophy className="text-midnight w-16 h-16 md:w-28 md:h-28" />
-          </div>
+        <div className="w-40 h-40 md:w-64 md:h-64 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-md overflow-hidden">
+          <img src="/rise-logo.png" alt="R.I.S.E. Tennis Logo" className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover shadow-[0_0_80px_rgba(223,255,0,0.4)]" />
         </div>
       </motion.div>
 
@@ -262,18 +260,12 @@ const About = () => {
 const Programs = () => {
   const programs = [
     {
-      title: "Fremont Summer Clinics",
-      desc: "Flexible scheduling designed for busy families. We provide all equipment and high-energy coaching.",
-      icon: <Calendar className="w-6 h-6" />,
+      title: "Fremont Spring Session",
+      desc: "Our flagship program offering free lessons for all skill levels. All equipment provided. Sign up now!",
+      icon: <Users className="w-6 h-6" />,
       color: "bg-tennis-neon",
-      textColor: "text-midnight"
-    },
-    {
-      title: "San Jose Launch Camp",
-      desc: "The perfect starting point for beginners. Focus on fundamentals, coordination, and most importantly, fun.",
-      icon: <Trophy className="w-6 h-6" />,
-      color: "bg-midnight",
-      textColor: "text-white"
+      textColor: "text-midnight",
+      link: "https://forms.gle/oYZfbAQ8E2e5b9K19"
     },
     {
       title: "Community Events",
@@ -296,7 +288,7 @@ const Programs = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {programs.map((p, i) => (
             <motion.div
               key={i}
@@ -314,9 +306,15 @@ const Programs = () => {
               <p className="text-midnight/60 font-medium mb-8 leading-relaxed">
                 {p.desc}
               </p>
-              <Link to="/programs" className="flex items-center gap-2 font-black text-midnight group-hover:gap-4 transition-all duration-300">
-                Learn More <ArrowRight className="w-5 h-5 text-energetic-orange" />
-              </Link>
+              {(p as any).link ? (
+                <a href={(p as any).link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-black text-midnight group-hover:gap-4 transition-all duration-300">
+                  Register Now <ArrowRight className="w-5 h-5 text-energetic-orange" />
+                </a>
+              ) : (
+                <Link to="/programs" className="flex items-center gap-2 font-black text-midnight group-hover:gap-4 transition-all duration-300">
+                  Learn More <ArrowRight className="w-5 h-5 text-energetic-orange" />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
@@ -488,8 +486,8 @@ export const HomePage = () => {
       <MissionHeadline />
       <About />
       <Programs />
-      <Podcast />
       <Gallery />
+      <Podcast />
       <CTA />
     </>
   );

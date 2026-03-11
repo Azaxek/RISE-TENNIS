@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Calendar, Trophy, Users, ArrowRight } from 'lucide-react';
+import { Calendar, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const ProgramsPage = () => {
   const programs = [
     {
-      title: "Fremont Clinics",
+      title: "Fremont Spring Session",
       location: "Central Park, Fremont",
       time: "Sign Ups Open",
       desc: "Our flagship program offering weekly sessions for all skill levels. All equipment is provided, including rackets and balls. Sign up through our registration form!",
@@ -14,17 +14,7 @@ export const ProgramsPage = () => {
       icon: <Calendar className="w-8 h-8" />,
       color: "bg-tennis-neon",
       textColor: "text-midnight",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfIOMmzgoUpsxI53eBZybu7-EIlmkMmNQZqiBaJR8qmOXiN8A/viewform"
-    },
-    {
-      title: "San Jose Launch Camp",
-      location: "Cataldi Park, San Jose",
-      time: "Coming Soon",
-      desc: "Join our free introductory tennis camp! Perfect for beginners to learn fundamental skills in a fun, welcoming setting. All equipment provided.",
-      details: ["Ages 5-12", "Absolute Beginners", "Focus on Fundamentals", "Fun Games & Prizes"],
-      icon: <Trophy className="w-8 h-8" />,
-      color: "bg-midnight",
-      textColor: "text-white"
+      link: "https://forms.gle/oYZfbAQ8E2e5b9K19"
     },
     {
       title: "Community Outreach",
