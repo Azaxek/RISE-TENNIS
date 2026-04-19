@@ -2,6 +2,21 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Heart, Users, Trophy, Star } from 'lucide-react';
 
+import imgHarshil from '../assets/members/harshil.jpeg';
+import imgAnanya from '../assets/members/ananya.jpg';
+import imgHarshal from '../assets/members/harshal.webp';
+import imgMoksha from '../assets/members/moksha.webp';
+import imgRishabh from '../assets/members/rishabh.jpeg';
+import imgIshaan from '../assets/members/ishaan.webp';
+import imgSaanvi from '../assets/members/saanvi.webp';
+import imgElizabeth from '../assets/members/elizabeth.webp';
+import imgLeina from '../assets/members/leina.webp';
+import imgAvinash from '../assets/members/avinash.webp';
+import imgSharon from '../assets/members/sharon.webp';
+import imgAniketh from '../assets/members/aniketh.jpeg';
+import imgArjun from '../assets/members/arjun.png';
+import imgDisha from '../assets/members/disha.jpg';
+
 export const TeamPage = () => {
   const team = [
     {
@@ -9,35 +24,35 @@ export const TeamPage = () => {
       role: "President",
       team: "Executive",
       bio: "I've been playing and competing in tennis for over five years, and it's become my passion and source of joy. I've realized the immense benefits the sport offers, and I want everyone to experience them.",
-      img: "/members/harshil.jpeg"
+      img: imgHarshil
     },
     {
       name: "Ananya Rawlani",
       role: "President",
       team: "Executive",
       bio: "I have been playing tennis for almost ten years now. It is my all time favorite sport, and I love the way the game works. I hope that everyone has the ability to experience the joy I feel when I play the game!",
-      img: "/members/ananya.jpg"
+      img: imgAnanya
     },
     {
       name: "Harshal Shah",
       role: "Vice President",
       team: "Executive",
       bio: "I started playing tennis around 4 years ago, and started playing tournaments regularly around 3 years ago. I really enjoy this game since it helps build you physically and mentally. When I heard about RISE I was very excited to join and help introduce the awesomeness of tennis to younger kids. I look forward to contributing to RISE Tennis.",
-      img: "/members/harshal.webp"
+      img: imgHarshal
     },
     {
       name: "Moksha Rawlani",
       role: "Vice President",
       team: "Executive",
       bio: "I've been playing tennis since the age of 5 or 6, and since then, it's been an integral part of my life. From playing with my dad and sister at a young age to being captain of the high school tennis team, I've always loved playing. I align with the goals of R.I.S.E. Tennis and hope to make tennis accessible for everyone.",
-      img: "/members/moksha.webp"
+      img: imgMoksha
     },
     {
       name: "Rishabh Shah",
       role: "Vice President",
       team: "Executive",
       bio: "I started playing tennis back in COVID with my younger brother to stay active, and it slowly grew to be more than just a sport to me. Tennis has provided me with wonderful experiences, and I want to extend this opportunity to play sports to everyone.",
-      img: "/members/rishabh.jpeg"
+      img: imgRishabh
     },
     {
       name: "Rahul",
@@ -58,7 +73,7 @@ export const TeamPage = () => {
       role: "Outreach Director",
       team: "Outreach",
       bio: "I started playing tennis around two years ago, shortly before joining my high school team. The sport has given me wonderful friendships and moments that I'll always cherish. I chose to be a part of R.I.S.E. Tennis as a way to make the sport more accessible and share its benefits with others.",
-      img: "/members/ishaan.webp"
+      img: imgIshaan
     },
     {
       name: "Riddhi C.",
@@ -79,28 +94,28 @@ export const TeamPage = () => {
       role: "Volunteer",
       team: "Outreach",
       bio: "My best friend is a tennis player and I've seen how it has positively affected her life in so many ways. Tennis always seemed like an elite sport to me, so R.I.S.E. was the perfect opportunity to help make it more accessible and learn more about how to do that.",
-      img: "/members/saanvi.webp"
+      img: imgSaanvi
     },
     {
       name: "Elizabeth George",
       role: "Volunteer",
       team: "Outreach",
       bio: "I got introduced to tennis when my little brother started playing a year ago. I've watched my parents struggle to find good affordable coaches and courses for him and so when I saw R.I.S.E. Tennis applications I loved the goal and went for it!",
-      img: "/members/elizabeth.webp"
+      img: imgElizabeth
     },
     {
       name: "Leina Ikeda",
       role: "Volunteer",
       team: "Outreach",
       bio: "Hi! I'm Leina, and I play numerous sports like cross country, soccer, and baseball. I have never played tennis before, but was intrigued by this program to make it accessible to all. I enjoy graphic design and website creation, and designing the RISE Tennis website has been a brilliant opportunity to apply these interests. I look forward to further contributing to RISE Tennis!",
-      img: "/members/leina.webp"
+      img: imgLeina
     },
     {
       name: "Avinash Kasturi",
       role: "Volunteer",
       team: "Outreach",
       bio: "I have been playing and competing competitively in tennis for around six years now, and want to share my passion with others. Some don't have access to tennis or have limited resources, so my goal is to change that!",
-      img: "/members/avinash.webp"
+      img: imgAvinash
     },
     {
       name: "Karan",
@@ -128,28 +143,28 @@ export const TeamPage = () => {
       role: "Coach",
       team: "Coaching",
       bio: "I started playing tennis for fun while testing out different sports at a young age. Tennis was the only sport that really stuck to me. I decided to come back to playing tennis recently and joined the MSJ girls' tennis team. I hope I can coach incoming players at RISE Tennis and help them overcome the difficulties that I went through while relearning how to play!",
-      img: "/members/sharon.webp"
+      img: imgSharon
     },
     {
       name: "Aniketh Nadipati",
       role: "Coach",
       team: "Coaching",
       bio: "I'm Aniketh. I have played tennis for 4 years. I like tennis because it's fun to play. I played with Harshal for a year and a half. I was excited to join because I want to help young kids grow their passion for tennis.",
-      img: "/members/aniketh.jpeg"
+      img: imgAniketh
     },
     {
       name: "Arjun Sachadeva",
       role: "Coach",
       team: "Coaching",
       bio: "I've been playing tennis for almost 8 years now starting at the age of 7; unfortunately, half of those years were spent dealing with an arm injury. I finally decided to come back to tennis and joined JV for MSJ's tennis team. I hope I'll be able to help other players with difficulties while playing tennis.",
-      img: "/members/arjun.png"
+      img: imgArjun
     },
     {
       name: "Disha",
       role: "Coach",
       team: "Coaching",
       bio: "Hi, I'm Disha! I've been playing tennis for most of my life and although I didn't always like it, it's become a fundamental part of my life. I've gained so many friends and memories through it like joining the MSJ girls tennis team! I want to join RISE to help others have the same opportunities!",
-      img: "/members/disha.jpg"
+      img: imgDisha
     },
     {
       name: "Shrisha",
