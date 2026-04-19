@@ -14,7 +14,8 @@ export const ProgramsPage = () => {
       icon: <Calendar className="w-8 h-8" />,
       color: "bg-tennis-neon",
       textColor: "text-midnight",
-      link: "https://forms.gle/oYZfbAQ8E2e5b9K19"
+      link: "https://forms.gle/oYZfbAQ8E2e5b9K19",
+      cta: "Register Now"
     },
     {
       title: "Community Outreach",
@@ -25,6 +26,18 @@ export const ProgramsPage = () => {
       icon: <Users className="w-8 h-8" />,
       color: "bg-energetic-orange",
       textColor: "text-white"
+    },
+    {
+      title: "Become a Member",
+      location: "R.I.S.E. Tennis",
+      time: "Always Open",
+      desc: "Officially join the R.I.S.E. Tennis family! Fill out our membership form to stay connected, receive updates, and be part of our growing community.",
+      details: ["All Ages Welcome", "Stay Informed", "Community Access", "Support Our Mission"],
+      icon: <Users className="w-8 h-8" />,
+      color: "bg-midnight",
+      textColor: "text-tennis-neon",
+      link: "https://docs.google.com/forms/d/1Bk3P6-7Gxs6Q7mMyaYFTpO1Xnaz-yqRW7AUNvZtabsA/viewform",
+      cta: "Join Now"
     }
   ];
 
@@ -82,7 +95,7 @@ export const ProgramsPage = () => {
                 </div>
                 {p.link && (
                   <a href={p.link} target="_blank" rel="noopener noreferrer" className="bg-midnight text-white px-8 py-4 rounded-2xl font-black flex items-center gap-3 self-start hover:bg-tennis-neon hover:text-midnight transition-all">
-                    Register Now <ArrowRight className="w-5 h-5" />
+                    {(p as any).cta ?? 'Register Now'} <ArrowRight className="w-5 h-5" />
                   </a>
                 )}
               </div>

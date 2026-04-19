@@ -470,9 +470,19 @@ const CTA = () => {
           <p className="max-w-2xl mx-auto text-xl text-midnight/80 font-bold mb-12">
             We are always looking for passionate volunteers, coaches, and leaders to join our youth-led team.
           </p>
-          <Link to="/team" className="inline-block bg-midnight text-white px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-2xl shadow-midnight/20">
-            Join Our Team
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link to="/team" className="inline-block bg-midnight text-white px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-2xl shadow-midnight/20">
+              Join Our Team
+            </Link>
+            <a
+              href="https://docs.google.com/forms/d/1Bk3P6-7Gxs6Q7mMyaYFTpO1Xnaz-yqRW7AUNvZtabsA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white/20 backdrop-blur-sm border-2 border-midnight/30 text-midnight px-12 py-6 rounded-2xl font-black text-xl hover:scale-105 hover:bg-white/40 transition-all duration-300 shadow-xl"
+            >
+              Become a Member
+            </a>
+          </div>
         </div>
       </motion.div>
     </section>

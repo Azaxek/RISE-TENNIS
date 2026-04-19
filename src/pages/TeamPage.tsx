@@ -4,26 +4,167 @@ import { Heart, Users, Trophy, Star } from 'lucide-react';
 
 export const TeamPage = () => {
   const team = [
-    { name: "Harshil Shah", role: "President", team: "Executive", bio: "Executive leader of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/harshil/400/400" },
-    { name: "Ananya Rawlani", role: "President", team: "Executive", bio: "Executive leader of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/ananya/400/400" },
-    { name: "Harshal Shah", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/harshal/400/400" },
-    { name: "Moksha Rawlani", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/moksha/400/400" },
-    { name: "Rishabh Shah", role: "Vice President", team: "Executive", bio: "Executive team member of R.I.S.E. Tennis.", img: "https://picsum.photos/seed/rishabh/400/400" },
-    { name: "Rahul", role: "Head Manager", team: "Management", bio: "Head Manager of operations.", img: "https://picsum.photos/seed/rahul/400/400" },
-    { name: "Arjan", role: "Technology Director", team: "Website", bio: "Handling website architecture and all things technology for R.I.S.E. Tennis.", img: "https://picsum.photos/seed/arjan/400/400" },
-    { name: "Ishaan Joshi", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in New Jersey.", img: "https://picsum.photos/seed/ishaan/400/400" },
-    { name: "Riddhi C.", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in Fremont, CA.", img: "https://picsum.photos/seed/riddhi/400/400" },
-    { name: "Avanthika", role: "Outreach Director", team: "Outreach", bio: "Leading outreach efforts in Philadelphia, PA.", img: "https://picsum.photos/seed/avanthika/400/400" },
-    { name: "Saanvi Bachamada", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in Fremont, CA.", img: "https://picsum.photos/seed/saanvi/400/400" },
-    { name: "Elizabeth George", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in Fremont, CA.", img: "https://picsum.photos/seed/elizabeth/400/400" },
-    { name: "Avinash Kasturi", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in Texas.", img: "https://picsum.photos/seed/avinash/400/400" },
-    { name: "Anushka", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in CA.", img: "https://picsum.photos/seed/anushka/400/400" },
-    { name: "Mishka", role: "Volunteer", team: "Outreach", bio: "Outreach volunteer based in CA.", img: "https://picsum.photos/seed/mishka/400/400" },
-    { name: "Sharon Lui", role: "Coach", team: "Coaching", bio: "Tennis coach in Fremont, CA.", img: "https://picsum.photos/seed/sharon/400/400" },
-    { name: "Aniketh Nadipati", role: "Coach", team: "Coaching", bio: "Tennis coach in San Jose, CA.", img: "https://picsum.photos/seed/aniketh/400/400" },
-    { name: "Arjun Sachadeva", role: "Coach", team: "Coaching", bio: "Tennis coach in Fremont, CA.", img: "https://picsum.photos/seed/arjun/400/400" },
-    { name: "Disha", role: "Coach", team: "Coaching", bio: "Tennis coach in Fremont, CA.", img: "https://picsum.photos/seed/disha/400/400" },
-    { name: "Lucas", role: "Coach", team: "Coaching", bio: "Tennis coach in San Jose, CA.", img: "https://picsum.photos/seed/lucas/400/400" }
+    {
+      name: "Harshil Shah",
+      role: "President",
+      team: "Executive",
+      bio: "I've been playing and competing in tennis for over five years, and it's become my passion and source of joy. I've realized the immense benefits the sport offers, and I want everyone to experience them.",
+      img: "/members/harshil.jpeg"
+    },
+    {
+      name: "Ananya Rawlani",
+      role: "President",
+      team: "Executive",
+      bio: "I have been playing tennis for almost ten years now. It is my all time favorite sport, and I love the way the game works. I hope that everyone has the ability to experience the joy I feel when I play the game!",
+      img: "/members/ananya.jpg"
+    },
+    {
+      name: "Harshal Shah",
+      role: "Vice President",
+      team: "Executive",
+      bio: "I started playing tennis around 4 years ago, and started playing tournaments regularly around 3 years ago. I really enjoy this game since it helps build you physically and mentally. When I heard about RISE I was very excited to join and help introduce the awesomeness of tennis to younger kids. I look forward to contributing to RISE Tennis.",
+      img: "/members/harshal.webp"
+    },
+    {
+      name: "Moksha Rawlani",
+      role: "Vice President",
+      team: "Executive",
+      bio: "I've been playing tennis since the age of 5 or 6, and since then, it's been an integral part of my life. From playing with my dad and sister at a young age to being captain of the high school tennis team, I've always loved playing. I align with the goals of R.I.S.E. Tennis and hope to make tennis accessible for everyone.",
+      img: "/members/moksha.webp"
+    },
+    {
+      name: "Rishabh Shah",
+      role: "Vice President",
+      team: "Executive",
+      bio: "I started playing tennis back in COVID with my younger brother to stay active, and it slowly grew to be more than just a sport to me. Tennis has provided me with wonderful experiences, and I want to extend this opportunity to play sports to everyone.",
+      img: "/members/rishabh.jpeg"
+    },
+    {
+      name: "Rahul",
+      role: "Head Manager",
+      team: "Management",
+      bio: "Head Manager of operations at R.I.S.E. Tennis, keeping everything running smoothly behind the scenes.",
+      img: "https://picsum.photos/seed/rahul-rise/400/400"
+    },
+    {
+      name: "Arjan",
+      role: "Technology Director",
+      team: "Website",
+      bio: "Handling website architecture and all things technology for R.I.S.E. Tennis.",
+      img: "https://picsum.photos/seed/arjan-rise/400/400"
+    },
+    {
+      name: "Ishaan Joshi",
+      role: "Outreach Director",
+      team: "Outreach",
+      bio: "I started playing tennis around two years ago, shortly before joining my high school team. The sport has given me wonderful friendships and moments that I'll always cherish. I chose to be a part of R.I.S.E. Tennis as a way to make the sport more accessible and share its benefits with others.",
+      img: "/members/ishaan.webp"
+    },
+    {
+      name: "Riddhi C.",
+      role: "Outreach Director",
+      team: "Outreach",
+      bio: "Hi everyone! I'm Riddhi, a sophomore at American High School. I joined RISE because I loved the idea of being part of a team that values passion, hard work, and growth. I'm so excited to work, learn, improve, and have fun with all of you!",
+      img: "https://picsum.photos/seed/riddhi-rise/400/400"
+    },
+    {
+      name: "Avanthika",
+      role: "Outreach Director",
+      team: "Outreach",
+      bio: "Leading outreach efforts in Philadelphia, PA, bringing the joy of tennis to new communities.",
+      img: "https://picsum.photos/seed/avanthika-rise/400/400"
+    },
+    {
+      name: "Saanvi Bachamada",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "My best friend is a tennis player and I've seen how it has positively affected her life in so many ways. Tennis always seemed like an elite sport to me, so R.I.S.E. was the perfect opportunity to help make it more accessible and learn more about how to do that.",
+      img: "/members/saanvi.webp"
+    },
+    {
+      name: "Elizabeth George",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "I got introduced to tennis when my little brother started playing a year ago. I've watched my parents struggle to find good affordable coaches and courses for him and so when I saw R.I.S.E. Tennis applications I loved the goal and went for it!",
+      img: "/members/elizabeth.webp"
+    },
+    {
+      name: "Leina Ikeda",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "Hi! I'm Leina, and I play numerous sports like cross country, soccer, and baseball. I have never played tennis before, but was intrigued by this program to make it accessible to all. I enjoy graphic design and website creation, and designing the RISE Tennis website has been a brilliant opportunity to apply these interests. I look forward to further contributing to RISE Tennis!",
+      img: "/members/leina.webp"
+    },
+    {
+      name: "Avinash Kasturi",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "I have been playing and competing competitively in tennis for around six years now, and want to share my passion with others. Some don't have access to tennis or have limited resources, so my goal is to change that!",
+      img: "/members/avinash.webp"
+    },
+    {
+      name: "Karan",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "Passionate volunteer helping to grow R.I.S.E. Tennis's outreach and community impact.",
+      img: "https://picsum.photos/seed/karan-rise/400/400"
+    },
+    {
+      name: "Anushka",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "Hi everyone! My name is Anushka, and I'm a sophomore at River Island High School. I'm so grateful to be a part of RISE and I'm excited to work hard and grow alongside all of you. I can't wait to get to know everyone better and make the most of this experience!",
+      img: "https://picsum.photos/seed/anushka-rise/400/400"
+    },
+    {
+      name: "Mishka",
+      role: "Volunteer",
+      team: "Outreach",
+      bio: "A dedicated volunteer contributing to R.I.S.E. Tennis's mission of making the sport accessible to all.",
+      img: "https://picsum.photos/seed/mishka-rise/400/400"
+    },
+    {
+      name: "Sharon Lui",
+      role: "Coach",
+      team: "Coaching",
+      bio: "I started playing tennis for fun while testing out different sports at a young age. Tennis was the only sport that really stuck to me. I decided to come back to playing tennis recently and joined the MSJ girls' tennis team. I hope I can coach incoming players at RISE Tennis and help them overcome the difficulties that I went through while relearning how to play!",
+      img: "/members/sharon.webp"
+    },
+    {
+      name: "Aniketh Nadipati",
+      role: "Coach",
+      team: "Coaching",
+      bio: "I'm Aniketh. I have played tennis for 4 years. I like tennis because it's fun to play. I played with Harshal for a year and a half. I was excited to join because I want to help young kids grow their passion for tennis.",
+      img: "/members/aniketh.jpeg"
+    },
+    {
+      name: "Arjun Sachadeva",
+      role: "Coach",
+      team: "Coaching",
+      bio: "I've been playing tennis for almost 8 years now starting at the age of 7; unfortunately, half of those years were spent dealing with an arm injury. I finally decided to come back to tennis and joined JV for MSJ's tennis team. I hope I'll be able to help other players with difficulties while playing tennis.",
+      img: "/members/arjun.png"
+    },
+    {
+      name: "Disha",
+      role: "Coach",
+      team: "Coaching",
+      bio: "Hi, I'm Disha! I've been playing tennis for most of my life and although I didn't always like it, it's become a fundamental part of my life. I've gained so many friends and memories through it like joining the MSJ girls tennis team! I want to join RISE to help others have the same opportunities!",
+      img: "/members/disha.jpg"
+    },
+    {
+      name: "Shrisha",
+      role: "Coach",
+      team: "Coaching",
+      bio: "A passionate tennis coach dedicated to helping young players develop their skills and love for the game at R.I.S.E. Tennis.",
+      img: "https://picsum.photos/seed/shrisha-rise/400/400"
+    },
+    {
+      name: "Lucas",
+      role: "Coach",
+      team: "Coaching",
+      bio: "Helping young players grow their game and passion for tennis at R.I.S.E. Tennis.",
+      img: "https://picsum.photos/seed/lucas-rise/400/400"
+    }
   ];
 
   return (
